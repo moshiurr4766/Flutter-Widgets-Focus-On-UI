@@ -1,16 +1,31 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: MyAPP(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyAPP extends StatelessWidget {
+  const MyAPP({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Hi"),
+      appBar: AppBar(
+        title: Text("Flutter All Widgets",
+            style: TextStyle(
+              color: const Color.fromARGB(255, 85, 25, 195),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            )) ,
+            centerTitle: true,
+      ),
+       
+      body: Center(
+        child: Text("Hello World"),
+      ),
     );
   }
 }
+

@@ -66,3 +66,4 @@ class AbsorbPointerExample extends StatelessWidget {
 //    - true  → blocks interactions (default)
 //    - false → allows interactions
 // ➤ Stops child & parent widgets from getting gestures.
+// ➤ Use for disabling parts of UI without changing appearance.

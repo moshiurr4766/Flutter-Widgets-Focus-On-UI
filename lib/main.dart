@@ -1,31 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/Widgets/home.dart';
+import 'package:flutter_widgets/Widgets/w001.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: MyAPP(),
-  ));
+  runApp(const MyWidget());
 }
 
-class MyAPP extends StatelessWidget {
-  const MyAPP({super.key});
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Flutter All Widgets",
-            style: TextStyle(
-              color: const Color.fromARGB(255, 85, 25, 195),
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            )) ,
-            centerTitle: true,
-      ),
-       
-      body: Center(
-        child: Text("Hello World"),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, 
+      initialRoute: 'w001',
+      routes: {
+        '/': (context) => const MyAPP(),
+        'w001': (context) => const AboutDialogExample(),
+      },
     );
   }
 }
-

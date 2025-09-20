@@ -3,6 +3,7 @@ import 'package:flutter_widgets/Widgets_1_20/home.dart';
 import 'package:flutter_widgets/Widgets_1_20/w001.dart';
 import 'package:flutter_widgets/Widgets_1_20/w002.dart';
 import 'package:flutter_widgets/Widgets_1_20/w003.dart';
+import 'package:flutter_widgets/Widgets_1_20/w004.dart';
 
 void main() {
   runApp(const MyWidget());
@@ -15,12 +16,13 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, 
-      initialRoute: 'w003',
+      initialRoute: 'w004',
       routes: {
         '/': (context) => const MyAPP(),
         'w001': (context) => const AboutDialogExample(),
         'w002': (context) => const AboutListTileExample(),
         'w003': (context) => const AbsorbPointerExample(),
+        'w004': (context) => const AlertDialogE(),
       },
     );
   }
